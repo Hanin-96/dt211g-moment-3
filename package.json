@@ -6,10 +6,11 @@
   "license": "ISC",
   "source": "src/index.html",
   "scripts": {
-    "start": "parcel --open chrome",
+    "start": "parcel",
     "build": "parcel build"
   },
   "devDependencies": {
+    "@parcel/transformer-sass": "^2.11.0",
     "parcel": "^2.11.0"
   }
 }

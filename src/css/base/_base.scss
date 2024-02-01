@@ -1,0 +1,19 @@
+/*Measurement*/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+$padding-base: 2rem;
+$margin-base: 2rem;
+
+$background-base: #fffae6;
+
+body {
+    background-color: $background-base;
+}
