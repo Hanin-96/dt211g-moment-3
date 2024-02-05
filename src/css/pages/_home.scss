@@ -1,0 +1,16 @@
+@use '../base/base';
+
+.images {
+    display: flex;
+    justify-content: space-between;
+    gap: base.$gap-base;
+    max-width: base.$page-width;
+    width: 100%;
+    margin: base.$center-margin;
+    margin-top: base.$margin-base;
+
+    img {
+        display: block;
+        width: 100%;
+    }
+}

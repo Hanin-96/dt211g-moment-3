@@ -9,11 +9,45 @@ html {
     font-size: 62.5%;
 }
 
+$page-width: 100rem;
+$center-margin: 0 auto;
 $padding-base: 2rem;
 $margin-base: 2rem;
+$gap-base: 2rem;
+$page-width: 100rem;
 
-$background-base: #fffae6;
+$background-base: #FFF5D3;
+$background-head: #F7996C;
+
+/*Button*/
+$btn-color: #AABFAC;
+
+@mixin btn-link {
+    background-color: $btn-color;
+    font-size: 2rem;
+    font-weight: bold;
+    border: 0;
+    border-radius: 2rem;
+    width: 100%;
+    padding: $padding-base;
+    cursor: pointer;
+    margin-top: $margin-base;
+}
+
+button {
+    @include btn-link();
+    &:hover {
+        background-color: darken($btn-color, 15%);
+    }
+}
+
 
 body {
     background-color: $background-base;
+    width: 100%;
+    margin: $center-margin;
+}
+
+main{
+    padding: $padding-base;
 }

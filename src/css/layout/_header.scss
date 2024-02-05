@@ -1,0 +1,14 @@
+/*Logotyp*/
+@use '../base/typography';
+@use '../base/base';
+
+.logotyp {
+    width: 100%;
+    max-width: 25rem;
+}
+
+header {
+    background-color: base.$background-head;
+    padding: base.$padding-base;
+    height: 14rem;
+}

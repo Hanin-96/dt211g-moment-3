@@ -1,20 +1,17 @@
 /*abstract folder*/
 
 /*base folder*/
-@import 'base/reset';
-@import 'base/typography';
-@import 'base/base';
-
-/*components folder*/
-
+@use 'base/reset';
+@use 'base/typography';
+@use 'base/base';
 
 /*layout folder*/
-
+@use 'layout/navigation';
+@use 'layout/header';
 
 /*pages folder*/
-
+@use 'pages/home';
 
 /*Themes folder*/
 
 
-/*Vendors folder*/

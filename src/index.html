@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="sv">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,11 +8,12 @@
     <title>Startsida</title>
     <link rel="stylesheet" href="css/main.scss">
 </head>
+
 <body>
     <header>
         <div class="logotyp">
             <a href="index.html">
-                Startsida
+                <img src="img/logotyp.svg" alt="logotyp">
             </a>
         </div>
         <nav>
@@ -33,9 +35,24 @@
         </nav>
     </header>
     <main>
+
         <h1>Hej</h1>
         <h2>hej igen</h2>
         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque vitae veniam, similique quae iure repellendus ducimus voluptates numquam molestiae quia? Iure quibusdam sunt, est asperiores similique possimus amet enim nulla.</p>
+
+        <div class="images">
+            <picture>
+                <source srcset="img/ramen-kbh.jpg?as=webp&height=400&width=400" type="image/webp">
+                <img src="img/ramen-kbh.jpg" alt="Slurp, ramen i Köpenhamn">
+            </picture>
+
+            <picture>
+                <source srcset="img/ramen-tu-biru.jpg?as=webp&height=400&width=400" type="image/webp">
+                <img src="img/ramen-tu-biru.jpg" alt="Ramen to biiru, ramen i Malmö">
+            </picture>
+        </div>
+        <button onclick="window.location.href='sass.html'">Gå till SASS</button>
     </main>
 </body>
+
 </html>
