@@ -7,6 +7,10 @@
     <meta name="description" content="CSS - Preprocessor">
     <title>Startsida</title>
     <link rel="stylesheet" href="css/main.scss">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,500;0,600;0,700;0,900;1,400&display=swap" rel="stylesheet">
+
 </head>
 
 <body>
@@ -35,24 +39,40 @@
         </nav>
     </header>
     <main>
+        <div class="image-wrap">
+            <div class="text-img-container">
+                <div class="image-text">
+                    <h1>Moment 3</h1>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque vitae veniam, similique quae iure repellendus ducimus voluptates numquam molestiae quia? Iure quibusdam sunt, est asperiores similique possimus amet enim nulla.</p>
+                    
+                    <h2>CSS-preprocessorer</h2>
+                    <h3>Syfte</h3>
+                    <p>Uppgiften går ut på att skapa en fiktiv webbplats med användning av både automatisering,komprimering i Parcel samt testa nya verktyg med SCSS.</p>
 
-        <h1>Hej</h1>
-        <h2>hej igen</h2>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque vitae veniam, similique quae iure repellendus ducimus voluptates numquam molestiae quia? Iure quibusdam sunt, est asperiores similique possimus amet enim nulla.</p>
+                    <p>Krav som ska implementeras in på webbplatsen är följande:</p>
 
-        <div class="images">
-            <picture>
-                <source srcset="img/ramen-kbh.jpg?as=webp&height=400&width=400" type="image/webp">
-                <img src="img/ramen-kbh.jpg" alt="Slurp, ramen i Köpenhamn">
-            </picture>
+                    <ul class="sass-list">
+                        <li>Variabler (minst färgschema ska lagras i variabler)</li>
+                        <li>Color functions (darken och lighten ska som minst användas, men använd gärna fler)</li>
+                        <li>Nesting</li>
+                        <li>Mixins</li>
+                        <li>Selector inheritance (nyckelordet "@extend").</li>
+                        <li>If/else-satser.</li>
+                        <li>Minst en partial</li>
+                        <li>Partials med en god filstruktur för CSS-kod</li>
+                    </ul>
 
-            <picture>
-                <source srcset="img/ramen-tu-biru.jpg?as=webp&height=400&width=400" type="image/webp">
-                <img src="img/ramen-tu-biru.jpg" alt="Ramen to biiru, ramen i Malmö">
-            </picture>
+                    <button>Läs mer om SASS</button>
+                </div>
+                <picture>
+                    <source srcset="img/konstmuseum.jpg?as=webp&height=400&width=400" type="image/webp">
+                    <img src="img/konstmuseum.jpg" alt="Museum konstverk">
+                </picture>
+            </div>
         </div>
-        <button onclick="window.location.href='sass.html'">Gå till SASS</button>
+
     </main>
+    <footer>&copy;Hanin</footer>
 </body>
 
 </html>

@@ -1,6 +1,7 @@
 @use '../base/base';
+@use '../base/typography';
 
-.images {
+.text-img-container {
     display: flex;
     justify-content: space-between;
     gap: base.$gap-base;
@@ -8,9 +9,23 @@
     width: 100%;
     margin: base.$center-margin;
     margin-top: base.$margin-base;
+    margin-bottom: base.$margin-base;
+    align-items: center;
 
     img {
         display: block;
         width: 100%;
+        border-radius: base.$img-border;
+        box-shadow: 10px 10px 1px 0px rgba(247,152,108,1);
+    }
+}
+
+.sass-list {
+    font-size: typography.$font-list;
+    font-style: italic;
+    margin: 2rem 0 2rem 4rem;
+
+    li {
+        margin-bottom: 0.5rem;
     }
 }

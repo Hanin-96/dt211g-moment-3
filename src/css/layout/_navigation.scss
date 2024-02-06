@@ -1,3 +1,15 @@
+@use '../base/typography';
+@use '../base/base';
+
+@mixin nav-link-style {
+    width: 100%;
+    list-style: none;
+    font-size: typography.$font-link;
+    white-space: nowrap;
+    background-color: base.$background-base;
+    padding: base.$padding-component;
+    border-radius: base.$component-radius;
+}
 
 nav {
     width: 100%;
@@ -6,5 +18,25 @@ nav {
     display: flex;
     justify-content: right;
     align-items: center;
-    
+
+    ul {
+        display: flex;
+        align-items: center;
+        gap: 5rem;
+        z-index: 5;
+    }
+
+    li {
+        @include nav-link-style();
+        
+        &:hover {
+            background-color: complement(base.$background-base);
+        }
+    }
+
+    a {
+        text-decoration: none;
+        font-size: typography.$font-link;
+    }
+
 }

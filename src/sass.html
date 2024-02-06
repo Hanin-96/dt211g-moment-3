@@ -1,12 +1,78 @@
 <!DOCTYPE html>
 <html lang="sv">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="CSS - Preprocessor">
-    <title>SASS</title>
+    <title>Startsida</title>
+    <link rel="stylesheet" href="css/main.scss">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,500;0,600;0,700;0,900;1,400&display=swap" rel="stylesheet">
+
 </head>
+
 <body>
-    <p>utvärdering av ditt arbete med SASS. Vilka för- och nackdelar ser du med SASS? Hur var det att komma igång att arbete med en CSS-preprocessor?</p>
+    <header>
+        <div class="logotyp">
+            <a href="index.html">
+                <img src="img/logotyp.svg" alt="logotyp">
+            </a>
+        </div>
+        <nav>
+            <ul>
+                <li class="nav-item">
+                    <a href="index.html">Start</a>
+                </li>
+                <li class="nav-item">
+                    <a href="sass.html"  id="active">SASS</a>
+                </li>
+            </ul>
+
+            <div class="menu-text">Meny</div>
+            <div class="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <h1>Moment 3</h1>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque vitae veniam, similique quae iure repellendus ducimus voluptates numquam molestiae quia? Iure quibusdam sunt, est asperiores similique possimus amet enim nulla.</p>
+
+        <div class="image-wrap">
+            <div class="text-img-container">
+                <div class="image-text">
+                    <h2>CSS-preprocessorer</h2>
+                    <h3>Syfte</h3>
+                    <p>Uppgiften går ut på att skapa en fiktiv webbplats med användning av tidigare användning av automatisering och komprimering i Parcel samt testa nya verktyg med SCSS.</p>
+
+                    <p>Krav som ska implementeras in på webbplatsen är följande:</p>
+
+                    <ul class="sass-list">
+                        <li>Variabler (minst färgschema ska lagras i variabler)</li>
+                        <li>Color functions (darken och lighten ska som minst användas, men använd gärna fler)</li>
+                        <li>Nesting</li>
+                        <li>Mixins</li>
+                        <li>Selector inheritance (nyckelordet "@extend").</li>
+                        <li>If/else-satser.</li>
+                        <li>Minst en partial</li>
+                        <li>Partials med en god filstruktur för CSS-kod</li>
+                    </ul>
+
+                    <button>Läs mer om SASS</button>
+                </div>
+                <picture>
+                    <source srcset="img/konstmuseum.jpg?as=webp&height=400&width=400" type="image/webp">
+                    <img src="img/konstmuseum.jpg" alt="Museum konstverk">
+                </picture>
+            </div>
+        </div>
+
+    </main>
+    <footer>&copy;Hanin</footer>
 </body>
+
 </html>

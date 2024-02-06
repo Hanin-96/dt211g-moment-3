@@ -9,15 +9,24 @@ html {
     font-size: 62.5%;
 }
 
+/*Totalla maxbredd, Margin & padding*/
 $page-width: 100rem;
 $center-margin: 0 auto;
 $padding-base: 2rem;
+$padding-component: 1rem;
 $margin-base: 2rem;
 $gap-base: 2rem;
 $page-width: 100rem;
 
+/*Standrad border radius*/
+$component-radius: 50px;
+
+/*Bakgrundsfärger*/
 $background-base: #FFF5D3;
 $background-head: #F7996C;
+
+/*Images*/
+$img-border: 30% 70% 70% 30% / 30% 47% 53% 70%;
 
 /*Button*/
 $btn-color: #AABFAC;
@@ -27,8 +36,9 @@ $btn-color: #AABFAC;
     font-size: 2rem;
     font-weight: bold;
     border: 0;
-    border-radius: 2rem;
+    border-radius: $component-radius;
     width: 100%;
+    max-width: 30rem;
     padding: $padding-base;
     cursor: pointer;
     margin-top: $margin-base;
