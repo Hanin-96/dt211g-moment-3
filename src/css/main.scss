@@ -6,12 +6,16 @@
 @use 'base/base';
 
 /*layout folder*/
+@use 'layout/grid';
 @use 'layout/navigation';
 @use 'layout/header';
+@use 'layout/footer';
 
 /*pages folder*/
 @use 'pages/home';
+@use 'pages/sass';
 
-/*Themes folder*/
+/*Media queries folder*/
+@use 'layout/mediaquery'
 
 

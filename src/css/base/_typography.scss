@@ -17,8 +17,6 @@ $font-h2 : 3.2rem;
 $font-h3 : 2.4rem;
 $font-link : 2rem;
 $font-list : 1.6rem;
-
-
 $text-margin : 0 0 1rem 0;
 $text-length : 55ch;
 
@@ -41,7 +39,6 @@ body {
     }
 
     p {
-        color: $text-dark;
         font-size: $text-p-size;
         max-width: $text-length;
         line-height: $base-line-height;

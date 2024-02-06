@@ -7,7 +7,6 @@
     font-size: typography.$font-link;
     white-space: nowrap;
     background-color: base.$background-base;
-    padding: base.$padding-component;
     border-radius: base.$component-radius;
 }
 
@@ -27,16 +26,32 @@ nav {
     }
 
     li {
-        @include nav-link-style();
-        
-        &:hover {
-            background-color: complement(base.$background-base);
+        list-style: none;
+
+        #active {
+            @include nav-link-style();
+            color: typography.$text-dark;
         }
     }
 
     a {
         text-decoration: none;
         font-size: typography.$font-link;
+        color: typography.$text-dark;
+        padding: base.$padding-component;
+
+        &:hover {
+            @include nav-link-style();
+            color: typography.$text-dark;
+        }
     }
+
+    .menu-text {
+        display: none;
+    }
+    .hamburger {
+        display: none;
+    }
+    
 
 }

@@ -1,0 +1,7 @@
+@use '../base/base';
+
+footer {
+    width: 100%;
+    height: 14rem;
+    background-color: base.$background-footer;
+}

@@ -5,6 +5,10 @@
 .logotyp {
     width: 100%;
     max-width: 25rem;
+
+    a:hover {
+        text-decoration: none !important;
+    }
 }
 
 header {
@@ -12,4 +16,5 @@ header {
     padding: base.$padding-base;
     height: 14rem;
     display: flex;
+    box-shadow: base.$item-shadow;
 }

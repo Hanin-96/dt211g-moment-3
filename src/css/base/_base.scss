@@ -24,12 +24,20 @@ $component-radius: 50px;
 /*Bakgrundsfärger*/
 $background-base: #FFF5D3;
 $background-head: #F7996C;
+$background-footer: #000000;
+
+/*Bakgrundsfärger dark*/
+$background-dark: #131314;
+$head-dark: #0A1F41;
 
 /*Images*/
 $img-border: 30% 70% 70% 30% / 30% 47% 53% 70%;
 
 /*Button*/
 $btn-color: #AABFAC;
+
+/*Skugga*/
+$item-shadow: 0 2px 5px 1px rgba(19,19,20,0.6);
 
 @mixin btn-link {
     background-color: $btn-color;
