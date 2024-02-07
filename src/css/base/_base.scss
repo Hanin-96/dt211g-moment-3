@@ -16,6 +16,7 @@ $center-margin: 0 auto;
 $padding-base: 2rem;
 $padding-component: 1rem;
 $margin-base: 2rem;
+$margin-menu: 1rem;
 $gap-base: 2rem;
 $page-width: 100rem;
 
@@ -24,15 +25,17 @@ $component-radius: 50px;
 
 /*Bakgrundsfärger*/
 $background-base: #FFF5D3;
-$background-head: #F7996C;
+$background-orange: #F7996C;
 $background-footer: #000000;
 
 /*Bakgrundsfärger dark*/
 $background-dark: #131314;
 $head-dark: #0A1F41;
+$nav-dropmenu-dark: #0A1F41;
 
 /*Button*/
 $btn-color: #AABFAC;
+$btn-dark: #0A1F41;
 
 /*Skugga*/
 $item-shadow: 0 2px 5px 1px rgba(19,19,20,0.6);
@@ -54,10 +57,11 @@ $img-radius: 50px;
 }
 
 button {
-    @include btn-link();
+    @include btn-link;
     &:hover {
         background-color: darken($btn-color, 15%);
     }
 }
+
 
 

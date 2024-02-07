@@ -11,7 +11,9 @@
 @use 'layout/body';
 @use 'layout/header';
 @use 'layout/footer';
-/*Media queries folder*/
+/*Dark-theme*/
+@use 'layout/darktheme';
+/*Media queries*/
 @use 'layout/mediaquery';
 
 /*pages folder*/

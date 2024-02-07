@@ -1,75 +1,43 @@
 @use '../base/typography';
 @use '../base/base';
 @use 'navigation';
-
-
-@media (prefers-color-scheme: dark) {
-
-    @mixin dark-page($background-color-mode) {
-        background-color: $background-color-mode;
-
-        @if $background-color-mode == base.$background-dark {
-            background-color: base.$background-dark;
-        }
-    }
-
-        body {
-            @include dark-page(base.$background-dark );
-        }
-
-        header {
-            background-color: base.$head-dark;
-        }
-
-        main {
-            color: typography.$text-light;
-        }
-
-        nav {
-            #active {
-                @include navigation.nav-link-style();
-            }
-
-
-            a {
-                text-decoration: none;
-                font-size: typography.$font-link;
-                color: typography.$text-light;
-                padding: base.$padding-component;
-
-                &:hover {
-                    @include navigation.nav-link-style();
-                }
-            }
-
-            .menu-text {
-                display: none;
-            }
-        }
-    }
-
-
-
+@use '../pages/home';
 
     @media screen and (max-width:950px) {
 
         /*......................................hamburger menu.......................................*/
         nav {
+            .nav-menu.active {
+                right: 0rem;
+            }
             ul {
                 /*Navbar dropdown*/
                 position: fixed;
                 right: -200%;
-                top: 0;
+                top: 13.5rem;
                 gap: 0;
                 flex-direction: column;
-                background-color: #AEC1E5;
+                background-color: base.$background-orange;
                 width: 100%;
                 text-align: center;
                 transition: 0.3s;
                 height: 100%;
                 justify-content: flex-start;
-                padding-top: 6rem;
-                z-index: 10;
+                padding-top: base.$padding-base;
+                z-index: 20;
+            }
+
+            li {
+                    display: inline;
+                    width: 100%;
+                    padding: base.$padding-base;
+            }
+
+            a{
+                font-size: typography.$font-drop-menu !important;
+            }
+            #active {
+                padding: base.$padding-base;
             }
 
 
@@ -89,7 +57,7 @@
                 height: 0.3rem;
                 margin: 0.5rem auto;
                 transition: all 0.3s ease-in-out;
-                background-color: #1E1E1E;
+                background-color: typography.$text-dark;
             }
 
             /*Transform bars to cross*/
@@ -105,10 +73,24 @@
                 transform: translateY(-0.8rem) rotate(-45deg);
             }
 
-            .nav-item {
-                display: inline;
-                width: 100%;
-            }
-
         }
+        
+    }
+
+    @media screen and (max-width:800px) {
+        .text-img-container {
+            flex-direction: column-reverse;
+            
+            img {
+                display: block;
+                width: 100%;
+                box-shadow: base.$item-shadow;
+                border-radius: base.$img-radius;
+            }
+        }
+
+        button {
+            max-width: unset !important;
+        }
+        
     }

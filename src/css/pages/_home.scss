@@ -9,27 +9,37 @@
 }
 
 
-main{
+main {
     padding: base.$padding-base;
     @include grid.grid-main;
 }
 
-.text-img-container {
+%img-container {
     display: flex;
     justify-content: space-between;
     gap: base.$gap-base;
     max-width: base.$page-width;
     width: 100%;
     margin: base.$center-margin;
-    margin-top: base.$margin-base;
+    margin-top: 14rem;
     margin-bottom: base.$margin-base;
     align-items: center;
+}
 
+.text-img-container {
+    @extend %img-container;
+    
     img {
         display: block;
         width: 100%;
+        max-width: 40rem;
         box-shadow: base.$item-shadow;
         border-radius: base.$img-radius;
+    }
+
+    .image-text {
+        max-width: 60rem;
+        width: 100%;
     }
 }
 

@@ -1,0 +1,69 @@
+@use '../base/typography';
+@use '../base/base';
+@use 'navigation';
+
+@media (prefers-color-scheme: dark) {
+
+    @mixin dark-page($background-color-mode) {
+        background-color: $background-color-mode;
+
+        @if $background-color-mode ==base.$background-dark {
+            background-color: base.$background-dark;
+        }
+    }
+
+    body {
+        @include dark-page(base.$background-dark );
+    }
+
+    header {
+        background-color: base.$head-dark;
+    }
+
+    main {
+        color: typography.$text-light;
+    }
+
+    nav {
+        #active {
+            @include navigation.nav-link-style();
+        }
+
+        ul {
+            background-color: base.$nav-dropmenu-dark !important;
+        }
+
+
+        a {
+            text-decoration: none;
+            font-size: typography.$font-link;
+            color: typography.$text-light;
+            padding: base.$padding-component;
+
+            &:hover {
+                @include navigation.nav-link-style();
+            }
+        }
+
+        .menu-text {
+            display: none;
+            color: typography.$text-light;
+        }
+
+        .bar {
+            background-color: typography.$text-light !important;
+        }
+    }
+
+    .btn-info {
+        @include base.btn-link();
+        background-color: base.$btn-dark;
+        color: base.$btn-color;
+
+        &:hover {
+            background-color: lighten(base.$btn-dark, 10%);
+        }
+    }
+
+
+}

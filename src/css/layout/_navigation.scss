@@ -29,7 +29,7 @@ nav {
         list-style: none;
 
         #active {
-            @include nav-link-style();
+            @include nav-link-style;
             color: typography.$text-dark;
         }
     }
@@ -48,10 +48,14 @@ nav {
 
     .menu-text {
         display: none;
+        font-size: typography.$font-link;
+        position: absolute;
+        right: 5rem;
     }
+
     .hamburger {
         display: none;
     }
-    
+
 
 }

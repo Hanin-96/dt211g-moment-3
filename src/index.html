@@ -10,6 +10,8 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,500;0,600;0,700;0,900;1,400&display=swap" rel="stylesheet">
+    <script src="js/menu.js" defer></script>
+    <link rel="icon" type="image/x-icon" href="img/favicon.png">
 
 </head>
 
@@ -21,21 +23,21 @@
             </a>
         </div>
         <nav>
-            <ul>
+            <ul class="nav-menu">
                 <li class="nav-item">
-                    <a href="index.html" id="active">Start</a>
+                    <a href="index.html" id="active" class="nav-link">Start</a>
                 </li>
                 <li class="nav-item">
-                    <a href="sass.html">SASS</a>
+                    <a href="sass.html" class="nav-link">SASS</a>
                 </li>
                 <li class="nav-item">
-                    <a href="#">Animering</a>
+                    <a href="#" class="nav-link">Animering</a>
                 </li>
                 <li class="nav-item">
-                    <a href="#">Diagram</a>
+                    <a href="#" class="nav-link">Diagram</a>
                 </li>
                 <li class="nav-item">
-                    <a href="#">Karta</a>
+                    <a href="#" class="nav-link">Karta</a>
                 </li>
             </ul>
 
@@ -52,11 +54,11 @@
             <div class="text-img-container">
                 <div class="image-text">
                     <h1>Moment 3</h1>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque vitae veniam, similique quae iure repellendus ducimus voluptates numquam molestiae quia? Iure quibusdam sunt, est asperiores similique possimus amet enim nulla.</p>
+                    <p>CSS-preprocessor som SASS har fler användbara funktioner. Den används för att effektivt kunna skriva och underhålla CSS-kod. Webbläsare har inte stöd för SASS, därför måste SASS kod kompileras till CSS-kod, detta görs med hjälp av Parcel.</p>
 
                     <h2>CSS-preprocessorer</h2>
                     <h3>Syfte</h3>
-                    <p>Uppgiften går ut på att skapa en fiktiv webbplats med användning av både automatisering, komprimering i Parcel samt arbeta med det nya verktyget SCSS.</p>
+                    <p>Uppgiften går ut på att skapa en fiktiv webbplats med användning av automatisering, komprimering i Parcel samt arbeta med det nya verktyget SCSS.</p>
 
                     <p>Krav som ska implementeras in på webbplatsen är följande:</p>
 
@@ -71,7 +73,7 @@
                         <li>Partials med en god filstruktur för CSS-kod</li>
                     </ul>
 
-                    <button onclick="window.location.href='sass.html'">Läs mer om SASS</button>
+                    <button onclick="window.location.href='sass.html'" class="btn-info">Läs mer om SASS</button>
                 </div>
                 <picture>
                     <source srcset="img/konstmuseum.jpg?as=webp&height=400&width=400" type="image/webp">

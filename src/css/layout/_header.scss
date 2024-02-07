@@ -14,9 +14,11 @@
 
 header {
     @include grid.grid-header;
-    background-color: base.$background-head;
+    background-color: base.$background-orange;
     padding: base.$padding-base;
     height: 14rem;
     display: flex;
     box-shadow: base.$item-shadow;
+    position: fixed;
+    width: 100%;
 }

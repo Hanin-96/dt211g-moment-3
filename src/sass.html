@@ -10,6 +10,8 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,500;0,600;0,700;0,900;1,400&display=swap" rel="stylesheet">
+    <script src="js/menu.js" defer></script>
+    <link rel="icon" type="image/x-icon" href="img/favicon.png">
 
 </head>
 
@@ -21,21 +23,21 @@
             </a>
         </div>
         <nav>
-            <ul>
+            <ul class="nav-menu">
                 <li class="nav-item">
-                    <a href="index.html">Start</a>
+                    <a href="index.html" class="nav-link">Start</a>
                 </li>
                 <li class="nav-item">
-                    <a href="sass.html" id="active">SASS</a>
+                    <a href="sass.html" id="active" class="nav-link">SASS</a>
                 </li>
                 <li class="nav-item">
-                    <a href="#">Animering</a>
+                    <a href="#" class="nav-link">Animering</a>
                 </li>
                 <li class="nav-item">
-                    <a href="#">Diagram</a>
+                    <a href="#" class="nav-link">Diagram</a>
                 </li>
                 <li class="nav-item">
-                    <a href="#">Karta</a>
+                    <a href="#" class="nav-link">Karta</a>
                 </li>
             </ul>
 
@@ -52,16 +54,28 @@
             <div class="text-img-container">
                 <div class="image-text">
                     <h1>SASS</h1>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque vitae veniam, similique quae iure repellendus ducimus voluptates numquam molestiae quia? Iure quibusdam sunt, est asperiores similique possimus amet enim nulla.</p>
+                    <p>Jag ser SASS som ett slags förlängning eller tillägg till CSS som både strukturerar och förenklar koden. Det har varit kul men även utmanande att applicera SASS. Dels för att Parcel krachar ofta vid snabba eller stora ändringar i kod, samt att det är många filer att hålla koll på när man bygger upp flera partials i projektet.</p>
 
-                    <h2>CSS-preprocessorer</h2>
-                    <h3>Fördelar</h3>
-                    <p>Uppgiften går ut på att skapa en fiktiv webbplats med användning av både automatisering, komprimering i Parcel samt arbeta med det nya verktyget SCSS.</p>
+                    <h2>Fördelar</h2>
+                    <ul class="sass-list">
+                        <li>Smidigt med att skapa och lagra variabler för typsnitt, färg, storlekar mm och senare återanvända dessa. Då kan man ändra värden på flera ställen samtidigt.</li>
+                        <li>Det är lättare att strukturera och spegla HTML kod genom nesting.</li>
+                        <li>Uppdelning av kod i flera filer så kallade Partials. Partials kopplas till en main fil som kompileras till CSS.</li>
+                        <li>Det är möjligt att manipulera färg till att bli ljusare, mörkare, nyans mm.</li>
+                        <li>Möjlighet att skapa regler och återanvända på andra ställen.</li>
+                        <li>Lättare att underhålla då koden är mer uppdelad.</li>
+                    </ul>
 
-                    <h3>Nackdelar</h3>
-                    <p>Uppgiften går ut på att skapa en fiktiv webbplats med användning av både automatisering, komprimering i Parcel samt arbeta med det nya verktyget SCSS.</p>
+                    <h2>Nackdelar</h2>
+                    <ul class="sass-list">
+                        <li>Det är svårt i början och tar tid att lära sig när man har stor vana i CSS.</li>
+                        <li>Webblässare har inte stöd för SASS, så koden måste omvandlas till CSS.</li>
+                        <li>Det kan bli många filer att hålla koll på.</li>
+                        <li>Mer komplext än CSS, fler steg att hålla koll på.</li>
+                        <li>Kan bli överkomplicerat när filerna blir större.</li>
+                    </ul>
 
-                    <button onclick="window.location.href='index.html'">Läs mer uppgiften</button>
+                    <button onclick="window.location.href='index.html'" class="btn-info">Läs mer om Moment 3</button>
                 </div>
                 <picture>
                     <source srcset="img/orange-car.jpg?as=webp&height=400&width=400" type="image/webp">
