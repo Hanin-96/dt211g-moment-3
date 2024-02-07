@@ -1,0 +1,10 @@
+@use "../base/typography";
+@use "../pages/home";
+@use "grid";
+
+
+body {
+    @include home.base-body;
+    @include typography.text-body;
+    @include grid.grid-body;
+    }

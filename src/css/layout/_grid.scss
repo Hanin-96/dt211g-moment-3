@@ -1,8 +1,8 @@
-/*Grid box*/
-body {
 
+/*Grid box*/
+@mixin grid-body {
+    display: grid;
     height: 100%;
-    width: 100%;
     max-width: 1920px;
     overflow-x: hidden;
     display: grid;
@@ -14,14 +14,14 @@ body {
         "footer";
 }
 
-header {
+@mixin grid-header {
     grid-area: header;
 }
 
-main {
+@mixin grid-main {
     grid-area: main;
 }
 
-footer {
+@mixin grid-footer {
     grid-area: footer;
 }

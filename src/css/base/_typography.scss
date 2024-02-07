@@ -1,3 +1,5 @@
+@use "base";
+
 /*Font rules*/
 
 $font-family-base : 'Poppins',
@@ -20,33 +22,32 @@ $font-list : 1.6rem;
 $text-margin : 0 0 1rem 0;
 $text-length : 55ch;
 
-body {
+@mixin text-body {
     color: $text-dark;
     font-family: $font-family-base;
+}
 
-    h1 {
-        font-size: $font-h1;
-        margin: 0;
+h1 {
+    font-size: $font-h1;
+    margin: 0;
+}
+
+h2 {
+    font-size: $font-h2;
+}
+
+h3 {
+    font-size: $font-h3;
+    margin: $text-margin;
+}
+
+p {
+    font-size: $text-p-size;
+    max-width: $text-length;
+    line-height: $base-line-height;
+    margin: 0 0 2rem 0;
+
+    &:first-of-type {
+        margin: 0 0 4rem 0;
     }
-
-    h2 {
-        font-size: $font-h2;
-    }
-
-    h3 {
-        font-size: $font-h3;
-        margin: $text-margin;
-    }
-
-    p {
-        font-size: $text-p-size;
-        max-width: $text-length;
-        line-height: $base-line-height;
-        margin: 0 0 2rem 0;
-
-        &:first-of-type {
-            margin: 0 0 4rem 0;
-        }
-    }
-
 }

@@ -8,14 +8,16 @@
 /*layout folder*/
 @use 'layout/grid';
 @use 'layout/navigation';
+@use 'layout/body';
 @use 'layout/header';
 @use 'layout/footer';
+/*Media queries folder*/
+@use 'layout/mediaquery';
 
 /*pages folder*/
 @use 'pages/home';
 @use 'pages/sass';
 
-/*Media queries folder*/
-@use 'layout/mediaquery'
+
 
 

@@ -1,7 +1,19 @@
 @use '../base/base';
+@use 'grid';
+@use '../base/typography';
 
 footer {
+    @include grid.grid-footer;
     width: 100%;
     height: 14rem;
     background-color: base.$background-footer;
+
+    ul {
+        color: typography.$text-light;
+        font-size: typography.$font-list;
+        padding: base.$padding-component;
+    }
+    li {
+        text-align: center;
+    }
 }
