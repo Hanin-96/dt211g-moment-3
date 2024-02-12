@@ -1,0 +1,35 @@
+.text-banner {
+    height: 20rem;
+    width: 100%;
+    position: relative;
+    margin-top: 14rem;
+    color: black;
+    padding: 2rem;
+    font-size: 6rem;
+    white-space: nowrap;
+    text-transform: uppercase;
+    animation: animate_banner 20s linear infinite forwards;
+    display: flex;
+    align-items: center;
+}
+
+.scroll-text {
+    width: 100%;
+    overflow: hidden;
+    display: flex;
+    white-space: nowrap;
+    background-color: white;
+}
+
+.text-banner span {
+    margin: 0 8rem;
+}
+
+@keyframes animate_banner {
+    0% {
+        transform: translateX(-2%);
+    }
+    100% {
+        transform: translateX(-95%);
+    }
+}

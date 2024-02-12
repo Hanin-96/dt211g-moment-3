@@ -10,11 +10,11 @@
 
 
 main {
-    padding: base.$padding-base;
     @include grid.grid-main;
 }
 
 %img-container {
+    padding: base.$padding-base;
     display: flex;
     justify-content: space-between;
     gap: base.$gap-base;

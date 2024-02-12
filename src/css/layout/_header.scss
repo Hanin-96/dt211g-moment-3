@@ -21,4 +21,5 @@ header {
     box-shadow: base.$item-shadow;
     position: fixed;
     width: 100%;
+    z-index: 20;
 }
