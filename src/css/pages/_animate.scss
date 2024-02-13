@@ -62,7 +62,7 @@
     left: 20rem;
     font-size: 2.4rem;
     margin: 2rem;
-    animation: car_text 10s 5s forwards;
+    animation: car_text 7s 1s forwards;
 }
 
 .car {
@@ -71,15 +71,19 @@
     right: 10rem;
     top: 15rem;
     padding: base.$padding-base;
-    animation: drive 10s 8.5s forwards;
+    animation: drive 8.7s 1s forwards;
+}
+
+.car-time {
+    animation: change_time 6s 2s linear;
 }
 
 .car-time:after {
     content: "";
-    animation: change-time 5s 10s linear;
+    animation: change_time 6s 2s linear;
 }
 
-@keyframes drive {
+@keyframes change_time {
     0% {
         content: "5";
     }
@@ -88,6 +92,18 @@
     }
     40% {
         content: "3";
+    }
+
+    60% {
+        content: "2";
+    }
+
+    80% {
+        content: "1";
+    }
+
+    100% {
+        content: "Kör";
     }
 }
 
@@ -112,33 +128,10 @@
 }
 
 @keyframes car_text {
-    0% {
-        opacity: 1;
+    from {
         visibility: visible;
     }
-
-    20% {
-        opacity: 0;
-        visibility: hidden;
-    }
-
-    40% {
-        opacity: 1;
-        visibility: visible;
-    }
-
-    60% {
-        opacity: 0;
-        visibility: hidden;
-    }
-
-    80% {
-        opacity: 1;
-        visibility: visible;
-    }
-
-    100% {
-        opacity: 0;
+    to {
         visibility: hidden;
     }
 }
