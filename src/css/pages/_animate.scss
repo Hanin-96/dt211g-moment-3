@@ -1,5 +1,10 @@
+@use '../base/base';
+
+.animate-container {
+    height: 120rem;
+}
 .text-banner {
-    height: 20rem;
+    height: 10rem;
     width: 100%;
     position: relative;
     margin-top: 14rem;
@@ -8,7 +13,7 @@
     font-size: 6rem;
     white-space: nowrap;
     text-transform: uppercase;
-    animation: animate_banner 20s linear infinite forwards;
+    animation: animate_banner 15s linear forwards;
     display: flex;
     align-items: center;
 }
@@ -19,10 +24,17 @@
     display: flex;
     white-space: nowrap;
     background-color: white;
+    box-shadow: inset 0 0 5px 2px rgba(19,19,20,0.6);
 }
 
 .text-banner span {
     margin: 0 8rem;
+}
+
+.images-wrap {
+    display: flex;
+    justify-content: space-evenly;
+    margin-top: 50rem;
 }
 
 @keyframes animate_banner {
@@ -31,5 +43,23 @@
     }
     100% {
         transform: translateX(-95%);
+    }
+}
+
+.car {
+    display: flex;
+    position: absolute;
+    right: 10rem;
+    top: 15rem;
+    padding: base.$padding-base;
+    animation: drive 5s 15s linear both;
+}
+
+@keyframes drive {
+    0% {
+        transform: translate(0, 0);
+    }
+    100% {
+        transform: translate(-2000px, 200px);
     }
 }
