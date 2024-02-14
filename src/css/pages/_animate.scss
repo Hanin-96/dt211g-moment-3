@@ -1,9 +1,5 @@
 @use '../base/base';
 
-.animate-container {
-    height: 160rem;
-}
-
 
 .text-banner {
     height: 10rem;
@@ -15,7 +11,7 @@
     font-size: 6rem;
     white-space: nowrap;
     text-transform: uppercase;
-    animation: animate_banner 25s linear backwards infinite;
+    animation: animate_banner 20s linear backwards infinite;
     display: flex;
     align-items: center;
 }
@@ -33,25 +29,13 @@
     margin: 0 8rem;
 }
 
-.images-wrap {
-    display: flex;
-    justify-content: space-evenly;
-    gap: 2rem;
-    margin: 50rem 2rem 0 2rem;
-
-    img {
-        display: block;
-        width: 100%;
-    }
-}
-
 .car {
     display: flex;
     position: absolute;
     right: 10rem;
     top: 15rem;
     padding: base.$padding-base;
-    animation: drive 4s 2s forwards;
+    animation: drive 6s 2s both;
 }
 
 .img-houses {
@@ -77,7 +61,11 @@
 
 .images-wrap {
     position: relative;
-    animation: move_images 1s linear 6s forwards;
+    animation: move_images 1s linear 8s forwards;
+    display: flex;
+    justify-content: space-evenly;
+    gap: 2rem;
+    margin: 45rem 2rem 0 2rem;
 
     img {
         width: 100%;
@@ -92,7 +80,7 @@
 
 .animate-info {
     padding: base.$padding-base;
-    animation: fade_text 2s ease-in-out 1s forwards;
+    animation: fade_text 1s ease-in-out 0.5s forwards;
     visibility: hidden;
     max-width: 100rem;
     margin: 0 auto;
@@ -137,11 +125,11 @@
 
 @keyframes animate_banner {
     0% {
-        transform: translateX(-1%);
+        transform: translateX(-2%);
     }
 
     100% {
-        transform: translateX(-95%);
+        transform: translateX(-64%);
     }
 }
 
@@ -154,6 +142,10 @@
 
 @keyframes drive {
     0% {
+        transform: translate(600px, 0);
+    }
+
+    25% {
         transform: translate(0, 0);
     }
 
