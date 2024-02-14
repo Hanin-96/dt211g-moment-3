@@ -1,7 +1,7 @@
 @use '../base/base';
 
 .animate-container {
-    height: 120rem;
+    height: 160rem;
 }
 
 
@@ -15,7 +15,7 @@
     font-size: 6rem;
     white-space: nowrap;
     text-transform: uppercase;
-    animation: animate_banner 15s linear forwards infinite;
+    animation: animate_banner 25s linear backwards infinite;
     display: flex;
     align-items: center;
 }
@@ -45,6 +45,96 @@
     }
 }
 
+.car {
+    display: flex;
+    position: absolute;
+    right: 10rem;
+    top: 15rem;
+    padding: base.$padding-base;
+    animation: drive 4s 2s forwards;
+}
+
+.img-houses {
+    cursor: pointer;
+    transition: all 2s ease;
+
+    &:hover {
+        transform: translateY(-12rem);
+        filter: grayscale(100%);
+        border-radius: 50rem;
+    }
+}
+
+.img-shrink {
+    cursor: pointer;
+    transition: transform 1s ease;
+
+    &:hover {
+        animation: shrink 1s 0s infinite backwards alternate;
+        border-radius: 50rem;
+    }
+}
+
+.images-wrap {
+    position: relative;
+    animation: move_images 1s linear 6s forwards;
+
+    img {
+        width: 100%;
+        display: block;
+        max-width: 40rem;
+    }
+
+    p {
+        width: 40rem;
+    }
+}
+
+.animate-info {
+    padding: base.$padding-base;
+    animation: fade_text 2s ease-in-out 1s forwards;
+    visibility: hidden;
+    max-width: 100rem;
+    margin: 0 auto;
+}
+
+.img-btn {
+    button {
+        max-width: 100%;
+    }
+}
+
+.rotate {
+    transition: transform 2s ease-in-out;
+    transform: rotate(360deg) rotate3d(1, 0, 0, 180deg);
+}
+
+
+/*Keyframes*/
+
+@keyframes shrink {
+    from {
+        transform: scale(1);
+    }
+
+    to {
+        transform: scale(0.8);
+        filter: drop-shadow(2px 1px 10px white);
+    }
+}
+
+@keyframes fade_text {
+    from {
+        opacity: 0;
+        visibility: hidden;
+    }
+
+    to {
+        opacity: 1;
+        visibility: visible;
+    }
+}
+
 @keyframes animate_banner {
     0% {
         transform: translateX(-1%);
@@ -55,55 +145,9 @@
     }
 }
 
-.blink-text {
-    display: inline;
-    position: relative;
-    top: 20rem;
-    left: 20rem;
-    font-size: 2.4rem;
-    margin: 2rem;
-    animation: car_text 7s 1s forwards;
-}
-
-.car {
-    display: flex;
-    position: absolute;
-    right: 10rem;
-    top: 15rem;
-    padding: base.$padding-base;
-    animation: drive 8.7s 1s forwards;
-}
-
-.car-time {
-    animation: change_time 6s 2s linear;
-}
-
-.car-time:after {
-    content: "";
-    animation: change_time 6s 2s linear;
-}
-
-@keyframes change_time {
-    0% {
-        content: "5";
-    }
-    20% {
-        content: "4";
-    }
-    40% {
-        content: "3";
-    }
-
-    60% {
-        content: "2";
-    }
-
-    80% {
-        content: "1";
-    }
-
-    100% {
-        content: "Kör";
+@keyframes move_images {
+    to {
+        transform: translatey(-400px)
     }
 }
 
@@ -114,7 +158,7 @@
     }
 
     50% {
-        transform: translate(-10, 10);
+        transform: translate(-10px, 10px);
     }
 
     75% {
@@ -122,16 +166,7 @@
     }
 
     100% {
-        transform: translate(-2000px, 200px) scale(1.8);
+        transform: translate(-2000px, 300px) scale(1.8);
     }
 
-}
-
-@keyframes car_text {
-    from {
-        visibility: visible;
-    }
-    to {
-        visibility: hidden;
-    }
 }

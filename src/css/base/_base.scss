@@ -24,12 +24,12 @@ $page-width: 100rem;
 $component-radius: 50px;
 
 /*Bakgrundsfärger*/
-$background-base: #FFF5D3;
-$background-orange: #F7996C;
-$background-footer: #000000;
+$bg-base: #FFF5D3;
+$bg-orange: #F7996C;
+$bg-footer: #000000;
 
 /*Bakgrundsfärger dark*/
-$background-dark: #131314;
+$bg-dark: #131314;
 $head-dark: #0A1F41;
 $nav-dropmenu-dark: #0A1F41;
 
@@ -62,6 +62,7 @@ button {
         background-color: darken($btn-color, 15%);
     }
 }
+
 
 
 

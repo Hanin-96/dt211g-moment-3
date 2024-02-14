@@ -11,6 +11,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,500;0,600;0,700;0,900;1,400&display=swap" rel="stylesheet">
     <script src="js/menu.js" defer></script>
+    <script src="js/button.js" defer></script>
     <link rel="icon" type="image/x-icon" href="img/favicon.png">
 
 </head>
@@ -52,13 +53,15 @@
     <main class="animate-container">
         <div class="scroll-text">
             <div class="text-banner">
-                <span>Välkommen till Frontend-baserad webbutveckling</span>
-                <span>Välkommen till Frontend-baserad webbutveckling</span>
+                <span>Välkommen till Animeringssidan</span>
+                <span>Välkommen till Animeringssidan</span>
+                <span>Välkommen till Animeringssidan</span>
             </div>
         </div>
 
-        <div class="car-text-wrap">
-            <p class="blink-text">Bilen kör om <span class="car-time"></span></p>
+        <div class="animate-info">
+            <h1>Animering</h1>
+            <p>På denna sidan har jag använt mig av transititions, keyframes för animationer och lite javascript för klick på knapp. Högst upp har vi en rörlig banderoll som har attributen infinite så att animeringen körs om och om igen utan stop. Bilen som dyker upp när sidan laddas, kör efter en stund och försvinner efter animering. De tre bilderna under har en time delay som gör att dem flyttas upp efter att bilen har kört iväg.</p>
         </div>
 
         <div class="car">
@@ -69,20 +72,28 @@
         </div>
 
         <div class="images-wrap">
-            <picture>
-                <source srcset="img/flera-hus.jpg?as=webp&height=400&width=400" type="image/webp">
-                <img src="img/flera-hus.jpg" alt="Färgglada hus i Simrishamn">
-            </picture>
+            <div class="img-hover">
+                <picture>
+                    <source srcset="img/flera-hus.jpg?as=webp&height=400&width=400" type="image/webp">
+                    <img src="img/flera-hus.jpg" alt="Färgglada hus i Simrishamn" class="img-houses">
+                </picture>
+                <p>Vid hover kommer fotot flyttas en bit uppåt i y-axel, byta till gråskala samt få runda hörn.</p>
+            </div>
 
-            <picture>
-                <source srcset="img/konst.jpg?as=webp&height=400&width=400" type="image/webp">
-                <img src="img/konst.jpg" alt="Utomhus konst">
-            </picture>
-
-            <picture>
-                <source srcset="img/ramen-tu-biru.jpg?as=webp&height=400&width=400" type="image/webp">
-                <img src="img/ramen-tu-biru.jpg" alt="Skål med Ramen">
-            </picture>
+            <div class="img-btn">
+                <picture>
+                    <source srcset="img/konst.jpg?as=webp&height=400&width=400" type="image/webp">
+                    <img src="img/konst.jpg" alt="Utomhus konst" id="img-rotate">
+                </picture>
+                <button id="click-btn">Klicka här</button>
+            </div>
+            <div class="img-hover">
+                <picture>
+                    <source srcset="img/ramen-tu-biru.jpg?as=webp&height=400&width=400" type="image/webp">
+                    <img src="img/ramen-tu-biru.jpg" alt="Skål med Ramen" class="img-shrink">
+                </picture>
+                <p>Vid hover kommer fotot minskas, pulsera och få en skugga.</p>
+            </div>
 
         </div>
     </main>

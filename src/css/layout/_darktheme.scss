@@ -7,13 +7,13 @@
     @mixin dark-page($background-color-mode) {
         background-color: $background-color-mode;
 
-        @if $background-color-mode ==base.$background-dark {
-            background-color: base.$background-dark;
+        @if $background-color-mode ==base.$bg-dark {
+            background-color: base.$bg-dark;
         }
     }
 
     body {
-        @include dark-page(base.$background-dark );
+        @include dark-page(base.$bg-dark );
     }
 
     header {

@@ -3,7 +3,7 @@
 @use '../layout/grid';
 
 @mixin base-body {
-    background-color: base.$background-base;
+    background-color: base.$bg-base;
     width: 100%;
     margin: base.$center-margin;
 }
