@@ -3,7 +3,7 @@
 
 .text-banner {
     height: 10rem;
-    width: 100%;
+    width: base.$total-width;
     position: relative;
     margin-top: 14rem;
     color: black;
@@ -17,7 +17,7 @@
 }
 
 .scroll-text {
-    width: 100%;
+    width: base.$total-width;
     overflow: hidden;
     display: flex;
     white-space: nowrap;
@@ -45,7 +45,7 @@
     &:hover {
         transform: translateY(-12rem);
         filter: grayscale(100%);
-        border-radius: 50rem;
+        border-radius: base.$component-radius;
     }
 }
 
@@ -55,26 +55,31 @@
 
     &:hover {
         animation: shrink 1s 0s infinite backwards alternate;
-        border-radius: 50rem;
+        border-radius: base.$component-radius;
     }
 }
 
 .images-wrap {
+    max-width: base.$page-width;
+    width: base.$total-width;
+    padding: base.$padding-base;
     position: relative;
     animation: move_images 1s linear 8s forwards;
     display: flex;
     justify-content: space-evenly;
     gap: 2rem;
-    margin: 45rem 2rem 0 2rem;
+    margin: 6rem auto 0 auto;
+    visibility: hidden;
+    opacity: 0;
 
     img {
-        width: 100%;
+        width: base.$total-width;
         display: block;
         max-width: 40rem;
     }
 
     p {
-        width: 40rem;
+        max-width: 40rem;
     }
 }
 
@@ -82,13 +87,13 @@
     padding: base.$padding-base;
     animation: fade_text 1s ease-in-out 0.5s forwards;
     visibility: hidden;
-    max-width: 100rem;
+    max-width: base.$page-width;
     margin: 0 auto;
 }
 
 .img-btn {
     button {
-        max-width: 100%;
+        max-width: base.$total-width;
     }
 }
 
@@ -134,8 +139,13 @@
 }
 
 @keyframes move_images {
+    from {
+        visibility: hidden;
+        opacity: 0;
+    }
     to {
-        transform: translatey(-400px)
+        visibility: visible;
+        opacity: 1;
     }
 }
 
@@ -158,7 +168,8 @@
     }
 
     100% {
-        transform: translate(-2000px, 300px) scale(1.8);
+        transform: translate(-2000px, 600px) scale(1.8);
     }
 
 }
+

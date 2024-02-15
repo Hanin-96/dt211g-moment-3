@@ -13,14 +13,14 @@
 @use 'layout/footer';
 /*Dark-theme*/
 @use 'layout/darktheme';
-/*Media queries*/
-@use 'layout/mediaquery';
 
 /*pages folder*/
 @use 'pages/home';
 @use 'pages/sass';
 @use 'pages/animate';
 
+/*Media queries*/
+@use 'layout/mediaquery';
 
 
 

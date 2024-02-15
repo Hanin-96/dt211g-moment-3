@@ -3,94 +3,157 @@
 @use 'navigation';
 @use '../pages/home';
 
-    @media screen and (max-width:950px) {
+@media screen and (max-width:1000px) {
 
-        /*......................................hamburger menu.......................................*/
-        nav {
-            .nav-menu.active {
-                right: 0rem;
-            }
-            ul {
-                /*Navbar dropdown*/
-                position: fixed;
-                right: -200%;
-                top: 13.5rem;
-                gap: 0;
-                flex-direction: column;
-                background-color: base.$bg-orange;
-                width: 100%;
-                text-align: center;
-                transition: 0.3s;
-                height: 100%;
-                justify-content: flex-start;
-                padding-top: base.$padding-base;
-                z-index: 20;
-            }
+    .car {
+            position: absolute;
+            right: 2rem;
+            top: 55rem;
 
-            li {
-                    display: inline;
-                    width: 100%;
-                    padding: base.$padding-base;
-            }
-
-            a{
-                font-size: typography.$font-drop-menu !important;
-            }
-            #active {
-                padding: base.$padding-base;
-            }
-
-
-            .hamburger {
-                display: block;
-                cursor: pointer;
-            }
-
-            .menu-text {
-                display: block;
-            }
-
-            /*streck till hamburgar meny*/
-            .bar {
-                display: block;
-                width: 2.5rem;
-                height: 0.3rem;
-                margin: 0.5rem auto;
-                transition: all 0.3s ease-in-out;
-                background-color: typography.$text-dark;
-            }
-
-            /*Transform bars to cross*/
-            .hamburger.active .bar:nth-child(2) {
-                opacity: 0;
-            }
-
-            .hamburger.active .bar:nth-child(1) {
-                transform: translateY(0.8rem) rotate(45deg);
-            }
-
-            .hamburger.active .bar:nth-child(3) {
-                transform: translateY(-0.8rem) rotate(-45deg);
-            }
-
-        }
-        
-    }
-
-    @media screen and (max-width:800px) {
-        .text-img-container {
-            flex-direction: column-reverse;
-            
             img {
-                display: block;
-                width: 100%;
-                box-shadow: base.$item-shadow;
-                border-radius: base.$img-radius;
+                max-width: 35rem;
             }
+    }
+
+    @keyframes drive {
+        0% {
+            transform: translate(0, 0);
+        }
+    
+        50% {
+            transform: rotate(10deg);
+        }
+    
+        100% {
+            transform: translate(-1200px, 400px) scale(1.4);
+        }
+    
+    }
+
+
+}
+
+@media screen and (max-width:950px) {
+
+    /*......................................hamburger menu.......................................*/
+    nav {
+        .nav-menu.active {
+            right: 0rem;
         }
 
-        button {
-            max-width: unset !important;
+        ul {
+            /*Navbar dropdown*/
+            position: fixed;
+            right: -200%;
+            top: 13.5rem;
+            gap: 0;
+            flex-direction: column;
+            background-color: base.$bg-orange;
+            width: 100%;
+            text-align: center;
+            transition: 0.3s;
+            height: 100%;
+            justify-content: flex-start;
+            padding-top: base.$padding-base;
+            z-index: 20;
         }
-        
+
+        li {
+            display: inline;
+            width: 100%;
+            padding: base.$padding-base;
+        }
+
+        a {
+            font-size: typography.$font-drop-menu !important;
+        }
+
+        #active {
+            padding: base.$padding-base;
+        }
+
+
+        .hamburger {
+            display: block;
+            cursor: pointer;
+        }
+
+        .menu-text {
+            display: block;
+        }
+
+        /*streck till hamburgar meny*/
+        .bar {
+            display: block;
+            width: 2.5rem;
+            height: 0.3rem;
+            margin: 0.5rem auto;
+            transition: all 0.3s ease-in-out;
+            background-color: typography.$text-dark;
+        }
+
+        /*Transform bars to cross*/
+        .hamburger.active .bar:nth-child(2) {
+            opacity: 0;
+        }
+
+        .hamburger.active .bar:nth-child(1) {
+            transform: translateY(0.8rem) rotate(45deg);
+        }
+
+        .hamburger.active .bar:nth-child(3) {
+            transform: translateY(-0.8rem) rotate(-45deg);
+        }
+
     }
+
+}
+
+@media screen and (max-width:800px) {
+    .text-img-container {
+        flex-direction: column-reverse;
+
+        img {
+            display: block;
+            width: 100%;
+            box-shadow: base.$item-shadow;
+            border-radius: base.$img-radius;
+        }
+    }
+
+    button {
+        max-width: unset !important;
+    }
+
+    .images-wrap {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    @keyframes move_images {
+        from {
+            visibility: hidden;
+            opacity: 0;
+        }
+        to {
+            visibility: visible;
+            opacity: 1;
+        }
+    }
+
+    .img-btn {
+        margin-bottom: base.$margin-base;
+    }
+
+}
+
+@media screen and (max-width:800px) { 
+    .car {
+        top: 60rem;
+
+        img {
+            max-width: 35rem;
+        }
+}
+
+}

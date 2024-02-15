@@ -20,6 +20,6 @@ header {
     display: flex;
     box-shadow: base.$item-shadow;
     position: fixed;
-    width: 100%;
+    width: 100vw;
     z-index: 20;
 }

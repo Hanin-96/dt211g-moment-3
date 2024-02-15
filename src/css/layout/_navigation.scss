@@ -11,7 +11,7 @@
 }
 
 nav {
-    width: 100%;
+    width: 100vw;
     max-height: 10rem;
     height: 100%;
     display: flex;
@@ -39,7 +39,7 @@ nav {
         font-size: typography.$font-link;
         color: typography.$text-dark;
         padding: base.$padding-component;
-        transition: all 0.5s ease-in-out;
+        transition: all 0.3s ease-in-out;
         border-radius: base.$component-radius;
 
         &:hover {
@@ -52,8 +52,8 @@ nav {
     .menu-text {
         display: none;
         font-size: typography.$font-link;
-        position: absolute;
-        right: 5rem;
+        position: relative;
+        margin-right: 0.5rem;
     }
 
     .hamburger {

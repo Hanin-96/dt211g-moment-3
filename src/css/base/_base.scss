@@ -11,6 +11,7 @@ html {
 }
 
 /*Totalla maxbredd, Margin & padding*/
+$total-width: 100%;
 $page-width: 100rem;
 $center-margin: 0 auto;
 $padding-base: 2rem;
@@ -21,7 +22,7 @@ $gap-base: 2rem;
 $page-width: 100rem;
 
 /*Standrad border radius*/
-$component-radius: 50px;
+$component-radius: 100px;
 
 /*Bakgrundsfärger*/
 $bg-base: #FFF5D3;
