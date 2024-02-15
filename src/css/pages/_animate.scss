@@ -32,7 +32,7 @@
 .car {
     display: flex;
     position: absolute;
-    right: 10rem;
+    right: 15rem;
     top: 15rem;
     padding: base.$padding-base;
     animation: drive 6s 2s both;
@@ -55,7 +55,7 @@
 
     &:hover {
         animation: shrink 1s 0s infinite backwards alternate;
-        border-radius: base.$component-radius;
+        border-radius: 20rem;
     }
 }
 
@@ -68,7 +68,7 @@
     display: flex;
     justify-content: space-evenly;
     gap: 2rem;
-    margin: 6rem auto 0 auto;
+    margin: 5rem auto 0 auto;
     visibility: hidden;
     opacity: 0;
 
@@ -134,7 +134,7 @@
     }
 
     100% {
-        transform: translateX(-64%);
+        transform: translateX(-64.5%);
     }
 }
 

@@ -130,6 +130,28 @@
         align-items: center;
     }
 
+    .text-banner {
+        height: 6rem;
+        font-size: typography.$font-banner-small;
+        animation: animate_banner 15s linear backwards infinite;
+
+        span {
+            margin: 0 2rem;
+        }
+    }
+
+     /*Skapa mer smooth text-banner*/
+    @keyframes animate_banner {
+        0% {
+            transform: translateX(-1%);
+        }
+    
+        100% {
+            transform: translateX(-84.5%);
+        }
+    }
+    
+
     @keyframes move_images {
         from {
             visibility: hidden;
@@ -147,7 +169,7 @@
 
 }
 
-@media screen and (max-width:800px) { 
+@media screen and (max-width:600px) { 
     .car {
         top: 60rem;
 
