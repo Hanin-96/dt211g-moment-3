@@ -6,16 +6,9 @@
 const hamburgerEl = document.querySelector(".hamburger");
 const navMenuEl = document.querySelector(".nav-menu");
 
-let clickBtn = document.getElementById('click-btn');
-let imageRotate = document.getElementById('img-rotate');
-
 //Eventlistener för toggla menyn
 hamburgerEl.addEventListener("click", toggleMenu);
-if(clickBtn != null) {
-    clickBtn.addEventListener('click', () => {
-        imageRotate.classList.toggle('rotate');
-    });
-}
+
 //Kalla på funktion för klick på länk
 closeDropDown();
 
