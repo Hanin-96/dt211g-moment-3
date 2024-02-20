@@ -17,6 +17,7 @@ nav {
     display: flex;
     justify-content: right;
     align-items: center;
+    padding: base.$padding-base;
 
     ul {
         display: flex;

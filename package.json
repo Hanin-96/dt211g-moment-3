@@ -17,5 +17,8 @@
   "browserslist": [
     "defaults and fully supports es6-module",
     "maintained node versions"
-  ]
+  ],
+  "dependencies": {
+    "chart.js": "^4.4.1"
+  }
 }
