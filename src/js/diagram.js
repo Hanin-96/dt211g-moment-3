@@ -1,21 +1,24 @@
 "use strict"
-loadAdmissions();
-let data = [];
-let courses = [];
-let programs = [];
+//För att hämta verktyg mm från chart.js
+import Chart from 'chart.js/auto'
 
-async function loadAdmissions() {
+//Kallar på init när sidan laddas
+window.onload = init;
+
+//Kallar på funktion som hämta api data
+function init() {
+    displayChartCourses();
+}
+
+//Hämtar data via url med async funktion
+async function getData() {
+    let url = "https://studenter.miun.se/~mallar/dt211g/";
     try {
-        const response = await fetch("https://studenter.miun.se/~mallar/dt211g/");
-        data = await response.json();
+        let response = await fetch(url);
 
-        courses = data.filter((admission) => admission.type == "Kurs");
-        programs = data.filter((admission) => admission.type == "Program");
-        console.log(courses);
-        console.log(programs);
+        return await response.json();
 
-        displayAdmissions(data);
-    } catch {
-        document.getElementById("diagram").innerHTML = " <p>Det går inte läsa av diagrammet</p>"
+    } catch (error) {
+        console.log("Det gick inte att hämta data");
     }
 }
