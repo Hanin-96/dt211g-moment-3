@@ -72,7 +72,7 @@ async function displayChartCourses() {
                     backgroundColor: [
                         "#F7996C",
                         "#AABFAC",
-                        "#1796D1",
+                        "#0A1F41",
                         "#6CAF89",
                         "#A6F4F7",
                         "#FFB434"],
@@ -128,7 +128,7 @@ async function displayChartPrograms() {
                     backgroundColor: [
                         "#F7996C",
                         "#AABFAC",
-                        "#FFB434",
+                        "#0A1F41",
                         "#6CAF89",
                         "#A6F4F7"],
                     data: programCounts
