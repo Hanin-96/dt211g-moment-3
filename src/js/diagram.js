@@ -51,15 +51,36 @@ async function displayChartCourses() {
     //Loopar igenom
     for (let i = 0; i < topCourses.length; i++) {
 
-    //Om textsträngen är längre än 35 så ska den kapas till 35 tecken + ... för att visa texten fortsätter
+        //Om textsträngen är längre än 35 så ska den kapas till 35 tecken + ... för att visa texten fortsätter
         if (topCourses[i].name.length > 35) {
             topCourses[i].name = topCourses[i].name.slice(0, 35) + "...";
         }
 
-    //Lägger in värden i elementen mha push
+        //Lägger in värden i elementen mha push
         courseLabels.push(topCourses[i].name);
         courseCounts.push(topCourses[i].applicantsTotal);
     }
+
+    //Använder chart.js för att lägga in värden i ett diagram
+    new Chart(document.getElementById("diagram-stapel"), {
+        type: 'bar',
+        data: {
+            labels: courseLabels,
+            datasets: [
+                {
+                    label: "Kurser",
+                    backgroundColor: [
+                        "#F7996C",
+                        "#AABFAC",
+                        "#1796D1",
+                        "#6CAF89",
+                        "#A6F4F7",
+                        "#FFB434"],
+                    data: courseCounts
+                }
+            ]
+        }
+    });
 
 }
 
