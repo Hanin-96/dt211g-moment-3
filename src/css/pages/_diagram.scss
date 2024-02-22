@@ -1,4 +1,31 @@
-#diagram {
-    margin-top: 14rem;
-    height: 100rem;
+@use "../base/base";
+
+.titel-diagram {
+    margin: 0 auto;
+    margin-top: 15rem;
+    max-width: base.$page-width;
+    padding: base.$padding-base;
+}
+
+.diagram {
+    max-width: base.$page-width;
+    margin: 0 auto;
+    margin-bottom: base.$margin-base;
+    background-color: white;
+    padding: base.$padding-base;
+
+    &:last-child {
+        max-width: 50rem;
+    }
+}
+
+.subtitle {
+    margin: 0 auto;
+    max-width: base.$page-width;
+    padding: base.$padding-base;
+}
+
+.subtitle-middle {
+    @extend .subtitle;
+    text-align: center;
 }
