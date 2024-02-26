@@ -23,6 +23,29 @@ const markerIcon = L.icon({
     iconUrl: markerIconUrl
 });
 
+//Hämtar sökknapp från html
+let searchButtonEl = document.getElementById("btn-map");
+
+//Lägger till eventlistener vid klick på knapp
+searchButtonEl.addEventListener("click", search);
+
+
+async function search() {
+    //Hämtar sökfält från html
+    let searchInput = document.getElementById("search-field").value;
+
+    //Hämtar specifik plats mha api från nominatim
+    const url = "https://nominatim.openstreetmap.org/search?format=json&limit=5&q=" + searchInput;
+
+    //Kör fetch på url som returnerar en promise
+    try {
+        let response = await fetch(url);
+        return await response.json(); //Returnerar json data
+        
+    } catch (error) {
+        console.error(error); //Vid fel körs error meddelande i konsollen
+    }
+}
 
 
 
