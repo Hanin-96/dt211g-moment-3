@@ -1,4 +1,4 @@
-# dt211g-Moment-3 & Moment-4 & Moment-5
+# dt211g-Moment-3, Moment-4 & Moment-5
 
 Moment 3 går ut på att skapa en fiktiv webbplats som använder SASS kod och dess funktioner, för att senare omvandla till CSS via Parcel.
 </br>
