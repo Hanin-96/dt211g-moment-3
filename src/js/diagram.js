@@ -51,10 +51,6 @@ async function displayChartCourses() {
 
     //Loopar igenom
     for (let i = 0; i < topCourses.length; i++) {
-        //Om textsträngen är längre än 35 så ska den kapas till 35 tecken + ... för att visa texten fortsätter
-        if (topCourses[i].name.length > 25) {
-            topCourses[i].name = topCourses[i].name.slice(0, 25) + "...";
-        }
 
         //Lägger in värden i elementen mha push
         courseLabels.push(topCourses[i].name);
@@ -76,11 +72,32 @@ async function displayChartCourses() {
                         "#6CAF89",
                         "#A6F4F7",
                         "#FFB434"],
-                    data: courseCounts
+                    data: courseCounts,
                 }
             ]
-            
+
+        },
+
+        options: {
+            plugins: {
+                legend: {
+                    labels: {
+                        color: "#000000",
+                    }
+                }
+            },
+            scales: {
+                y: {
+                    ticks: {
+                        color: "#000000", beginAtZero: true
+                    }
+                },
+                x: {
+                    display: false // Gömmer x-labels för bättre responsiv
+                }
+            }
         }
+
     });
 
 }
@@ -134,6 +151,15 @@ async function displayChartPrograms() {
                     data: programCounts
                 }
             ]
+        },
+        options: {
+            plugins: {
+                legend: {
+                    labels: {
+                        color: "#000000",
+                    }
+                }
+            }
         }
     });
 

@@ -1,4 +1,5 @@
 @use "../base/base";
+@use "../base/typography";
 @use "diagram";
 
 .titel-karta {
@@ -8,9 +9,28 @@
 /*Kartan behöver mått för att synas på sidan*/
 #map {
     height: 500px;
-    max-width: base.$page-width;
+    width: 100%;
+    max-width: 500px;
     z-index: 1;
     margin: 0 auto 2rem;
 }
 
+.search-input {
+    max-width: 50rem;
+    width: 100%;
+    font-size: typography.$text-p-size;
+    padding: base.$padding-component;
+}
 
+.map-wrapper {
+    display: flex;
+    flex-direction: column;
+    padding: 2rem;
+
+    .search-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-bottom: 5rem;
+    }
+}

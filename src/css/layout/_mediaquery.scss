@@ -37,6 +37,7 @@
 
     /*......................................hamburger menu.......................................*/
     nav {
+        padding: unset;
         .nav-menu.active {
             right: 0rem;
         }
@@ -121,8 +122,20 @@
         }
     }
 
+    @mixin width-media {
+        max-width: unset;
+    }
+
     button {
-        max-width: unset !important;
+        @include width-media();
+    }
+
+    #map {
+        @include width-media();
+    }
+
+    .search-input {
+        @include width-media();
     }
 
     .images-wrap {
@@ -170,11 +183,14 @@
 }
 
 @media screen and (max-width:600px) { 
+    h2 {
+        font-size: 2.4rem;
+    }
     .car {
-        top: 60rem;
+        top: 75rem;
 
         img {
-            max-width: 35rem;
+            max-width: 30rem;
         }
 }
 

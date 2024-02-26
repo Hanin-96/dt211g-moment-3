@@ -8,20 +8,21 @@
 }
 
 .diagram {
-    max-width: base.$page-width;
+    padding: base.$padding-base;
+    max-width: 60rem;
+    width: 100%;
     margin: 0 auto;
     margin-bottom: base.$margin-base;
-    background-color: white;
-    padding: base.$padding-base;
+    background-color: base.$bg-base;
 
     &:last-child {
-        max-width: 50rem;
+        max-width: 60rem;
     }
 }
 
 .subtitle {
     margin: 0 auto;
-    max-width: base.$page-width;
+    text-align: center;
     padding: base.$padding-base;
 }
 
