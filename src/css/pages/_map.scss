@@ -13,6 +13,7 @@
     max-width: 500px;
     z-index: 1;
     margin: 0 auto 2rem;
+    border: 2px solid base.$btn-color;
 }
 
 .search-input {
@@ -20,6 +21,7 @@
     width: 100%;
     font-size: typography.$text-p-size;
     padding: base.$padding-component;
+    border: 2px solid base.$btn-color;
 }
 
 .map-wrapper {
