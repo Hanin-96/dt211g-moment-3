@@ -27,7 +27,7 @@ const markerIcon = L.icon({
 let searchButtonEl = document.getElementById("btn-map");
 
 //Lägger till eventlistener vid klick på knapp
-searchButtonEl.addEventListener("click", search);
+searchButtonEl.addEventListener("click", displaySearch);
 
 
 async function search() {
@@ -41,12 +41,42 @@ async function search() {
     try {
         let response = await fetch(url);
         return await response.json(); //Returnerar json data
-        
+
     } catch (error) {
         console.error(error); //Vid fel körs error meddelande i konsollen
     }
 }
 
+
+async function displaySearch() {
+    let errorMessage = document.getElementById("error");
+    errorMessage.innerHTML = ""; //Tömmer felmeddelande vid varje sökning
+
+    //Hämtar data från funktionen search
+    let data = await search();
+
+    //if-sats som visar första resultat i arrayen
+    if (data.length > 0) {
+        let firstResult = data[0];
+
+
+        //Hämtar longitud och latitud för första resultatet
+        let lat = firstResult.lat;
+        let lon = firstResult.lon;
+
+        //Om positionsikonen redan finns på kartan ska den gamla tas bort
+        if (marker) {
+            map.removeLayer(marker);
+        }
+
+        //Lägger till positionsikon på kartan med specifik inzoomning på 13
+        marker = L.marker([lat, lon], { icon: markerIcon }).addTo(map);
+        map.setView([lat, lon], 13);
+    } else {
+        errorMessage.innerHTML = "<p>Inget resultat</p>" //Om platsen inte finns kommer felmeddelande dyka upp
+    }
+
+}
 
 
 
