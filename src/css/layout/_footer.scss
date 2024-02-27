@@ -12,6 +12,7 @@ footer {
         color: typography.$text-light;
         font-size: typography.$font-list;
         padding: base.$padding-component;
+        list-style: none;
     }
     li {
         text-align: center;
